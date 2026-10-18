@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PROJECT-12: Boeing AH-64E Apache Guardian Technical Defense Report</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm 15mm 20mm 15mm;
+        }
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+            color: #1a202c;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            background: #fff;
+        }
+        .cover {
+            page-break-after: always;
+            text-align: center;
+            padding-top: 60px;
+        }
+        .cover h1 {
+            font-size: 28pt;
+            color: #1a365d;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        .cover h2 {
+            font-size: 16pt;
+            color: #2b6cb0;
+            font-weight: 500;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+        .badge {
+            display: inline-block;
+            background: #2b6cb0;
+            color: #fff;
+            padding: 6px 16px;
+            font-size: 11pt;
+            font-weight: 600;
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+        .meta-box {
+            margin: 40px auto;
+            max-width: 480px;
+            background: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 24px;
+            text-align: left;
+            font-size: 11pt;
+        }
+        .meta-box p {
+            margin: 8px 0;
+        }
+        .meta-box strong {
+            color: #2d3748;
+            display: inline-block;
+            width: 160px;
+        }
+        h2.section-title {
+            color: #1a365d;
+            border-bottom: 2px solid #2b6cb0;
+            padding-bottom: 6px;
+            margin-top: 35px;
+            font-size: 16pt;
+        }
+        h3 {
+            color: #2c5282;
+            margin-top: 20px;
+            font-size: 13pt;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 10pt;
+        }
+        th, td {
+            border: 1px solid #cbd5e0;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th {
+            background: #edf2f7;
+            color: #2d3748;
+            font-weight: 600;
+        }
+        tr:nth-child(even) td {
+            background: #f8fafc;
+        }
+        .callout {
+            background: #ebf8ff;
+            border-left: 4px solid #3182ce;
+            padding: 12px 16px;
+            margin: 15px 0;
+            border-radius: 0 6px 6px 0;
+            font-size: 10.5pt;
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 9pt;
+            color: #718096;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 15px;
+        }
+        code {
+            background: #edf2f7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: Consolas, monospace;
+            font-size: 9.5pt;
+        }
+    </style>
+</head>
+<body>
+
+<div class="cover">
+    <div class="badge">AEROSPACE DEFENSE SIMULATION REPORT</div>
+    <h1>PROJECT-12</h1>
+    <h2>Boeing AH-64E Apache Guardian<br>Border Defense War Simulator</h2>
+    <div style="height: 20px;"></div>
+    <div class="meta-box">
+        <p><strong>Lead Architect:</strong> Mr ELONIKHIL (mr elonikhil)</p>
+        <p><strong>Airframe Model:</strong> Boeing AH-64E Apache Guardian</p>
+        <p><strong>Subsystem Count:</strong> 4 Integrated Avionics Suites</p>
+        <p><strong>CAD Parts Count:</strong> 1,480 Precision Mated Solid Bodies</p>
+        <p><strong>Adversary Units:</strong> 12 Unique Threat Attack Profiles</p>
+        <p><strong>Physics Paradigm:</strong> 6-DOF Rigidbody + Anti-Gravity</p>
+        <p><strong>3D Engine Pipeline:</strong> PlayCanvas JS / WebGL &amp; Blender 5.2</p>
+        <p><strong>License:</strong> MIT Open Source</p>
+        <p><strong>Release Date:</strong> October 2026</p>
+    </div>
+</div>
+
+<h2 class="section-title">1. Executive Summary</h2>
+<p>
+    <strong>Project 12</strong> represents an ultra-high-fidelity, zero-dependency browser-based combat vehicle simulation and 3D CAD modeling suite. Built on a 6-DOF Rigidbody physics paradigm, the software faithfully replicates the Boeing AH-64E Apache Guardian attack helicopter operating over the mountainous terrain of the Kashmir Line of Control (LOC) around Forward Operating Base (FOB) Uri.
+</p>
+<p>
+    The vehicle replaces mechanical rotor physics with an advanced anti-gravity propulsion core capable of delivering continuous vertical thrust counteracting gravity, dynamic aerodynamic drag damping, and automatic center-of-mass balancing against asymmetrical weapon stores.
+</p>
+
+<div class="callout">
+    <strong>Zero-Dependency Engineering Mandate:</strong> All 3D vector calculations, matrix transformations, PID anti-windup clamping, cubic Hermite spline interpolation, 90-degree conical radar sweep dot products, and procedural Web Audio threat tone synthesis are implemented natively in pure code with zero third-party plugins.
+</div>
+
+<h2 class="section-title">2. Subsystem Architecture Specifications</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Subsystem</th>
+            <th>Primary Module</th>
+            <th>Core Mathematical Functions &amp; Avionics Roles</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>System 1: GNC Engine</strong></td>
+            <td><code>GNCSystem.js</code></td>
+            <td>
+                - Discrete 3D PID hover hold with anti-windup clamping.<br>
+                - Low-pass filtered derivative term (alpha = 0.25).<br>
+                - 3-ray predictive TFR array (0°, 30°, 45° lookahead, 50m-300m range).<br>
+                - Cubic Hermite spline target altitude smoother (+15.0m clearance).
+            </td>
+        </tr>
+        <tr>
+            <td><strong>System 2: EW &amp; Radar Suite</strong></td>
+            <td><code>ElectronicWarfareSuite.js</code></td>
+            <td>
+                - 360° RWR azimuth tracking normalized to [-180°, +180°].<br>
+                - Tri-state threat alerts: SEARCH (&gt;500m), TRACK (&lt;=500m), LOCK (missile).<br>
+                - Web Audio API procedural synthesis: 1Hz (SEARCH), 5Hz (TRACK), continuous (LOCK).<br>
+                - Automated CMDS: 0.25s time-locked dispenser of active thermal Flares &amp; reflective Chaff.<br>
+                - Intercept algorithm overriding incoming missile target transforms.
+            </td>
+        </tr>
+        <tr>
+            <td><strong>System 3: Tactical Data Link</strong></td>
+            <td><code>TacticalDataLink.js</code></td>
+            <td>
+                - Link 16 military data bus with distance-dependent latency (0.1s - 0.5s).<br>
+                - Simulated radio-electronic position distortion.<br>
+                - FCR 90° conical volumetric sweep (+/- 45° azimuth, 1000m range).<br>
+                - 3-factor Threat Index Weight: 45% Proximity, 35% Threat Class, 20% Closure Velocity.<br>
+                - Priority sort of top 16 contacts with Index 0 Primary Weapon Lock.
+            </td>
+        </tr>
+        <tr>
+            <td><strong>System 4: Stores Management</strong></td>
+            <td><code>StoresManagementSystem.js</code></td>
+            <td>
+                - 4 wing hardpoints (Hellfire, Hydra pods) + 30mm central ammo drum.<br>
+                - Dynamic Gross Mass recalculation upon weapon discharge.<br>
+                - Weighted-average Center of Mass (CoM) physical vector offset.<br>
+                - Asymmetrical rolling torque simulation (tau = R_CoM x -Mg).<br>
+                - 5-page military MFD text stream (MENU, GNC_TFR, EW_RWR, TAC_LINK, SMS_STORES).
+            </td>
+        </tr>
+        <tr>
+            <td><strong>Master Controller</strong></td>
+            <td><code>AntiGravityHelicopterMaster.js</code></td>
+            <td>
+                - Rigidbody flight physics integrator.<br>
+                - Anti-gravity vertical thrust, aerodynamic drag, angular rate damping.<br>
+                - Automatic roll trim counteracting asymmetrical ordnance loadouts.<br>
+                - Pilot flight input translator (cyclic, collective, anti-torque rudder).
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 class="section-title">3. Operational Combat Capabilities</h2>
+<h3>3.1 Weapons Suite</h3>
+<ul>
+    <li><strong>M230 30mm Chain Gun:</strong> Continuous cyclic fire, dual-layer illuminated tracers (incandescent white core + golden corona), dynamic muzzle flash, and physical spent brass casing ejection.</li>
+    <li><strong>AGM-114L Hellfire:</strong> Top-attack loft trajectory climbing +52m before diving into target top armor.</li>
+    <li><strong>Hydra 70 Rockets:</strong> High-explosive folding-fin aerial rocket salvos.</li>
+    <li><strong>1-Shot Super Smash ([X]):</strong> Salvo obliterating all 12 hostile units simultaneously in synchronized cluster strikes.</li>
+</ul>
+
+<h3>3.2 12 Hostile Border Adversary Units</h3>
+<p>
+    The theater models 12 distinct enemy threat types: HQ-17A Mobile SAM Battery, Al-Khalid Main Battle Tank, ZSU-23-4 Shilka Quad AAA, Insurgent Technical Pickup (12.7mm DShK), RPG-7 Mountain Ambush Squad, 120mm Heavy Mortar Dugout, Anza Mk-II / QW-2 MANPADS, Shahed-136 Kamikaze Drone, Mi-35 Hind Gunship, Riverine Patrol Boat, Early Warning Phased-Array Radar Bunker, and Mountain Ridge Sniper Redoubts.
+</p>
+
+<div class="footer">
+    PROJECT-12: Boeing AH-64E Apache Guardian Border Defense Simulator &bull; Author: Mr ELONIKHIL &bull; MIT License
+</div>
+
+</body>
+</html>
